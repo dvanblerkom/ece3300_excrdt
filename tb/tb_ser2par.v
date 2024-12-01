@@ -60,7 +60,7 @@ module tb_ser2par;
       end
       
       // Finish simulation
-      #10000;
+      #160;
       $finish_and_return(test_fail | (checkdata < 255));  
    end
    
