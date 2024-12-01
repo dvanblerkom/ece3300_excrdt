@@ -1,0 +1,17 @@
+# Read the Verilog source file
+read_verilog ./src/Ser2Par.v
+
+# Perform design elaboration
+hierarchy -check -top fsm_example
+
+# Generate RTL netlist and check for inferred latches
+proc; opt
+
+# Show warnings for inferred latches
+check
+
+# Write the results to a report file (optional)
+#write_verilog -noexpr output_netlist.v
+
+# Optionally display the design hierarchy and gates
+#show
